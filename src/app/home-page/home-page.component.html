@@ -1,0 +1,29 @@
+<div class="wrap">
+    <div style="padding-left: 20%; padding-right: 20%; padding-top: 7%;">
+        
+        <div class="center">
+            <img src="https://sv1.picz.in.th/images/2022/02/26/rUnY3E.png" class="img-thumbnail">
+            <div class="font-size-center">
+                <p style="font-size:50px"><u>นัดตัดผม</u></p>
+            </div>
+
+            <div class="ng-autocomplete" style="width: 100%;">
+                <ng-autocomplete [data]="_barbershopList" [searchKeyword]="keyword" placeholder="ค้นหาด้วยชื่อร้านตัดผม"
+                    [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate">
+                </ng-autocomplete>
+
+                <ng-template #itemTemplate let-item>
+                    <a [innerHTML]="item.name"></a>
+                </ng-template>
+
+                <ng-template #notFoundTemplate let-notFound>
+                    <div [innerHTML]="notFound"></div>
+                </ng-template>
+            </div>
+        </div>
+
+        <div style="text-align:center">This text will be centered.
+            <p>So will this paragraph.</p></div>
+
+    </div>
+</div>
